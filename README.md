@@ -2,61 +2,67 @@
 
 This is a simple trading app project built using Devise for authentication, Tailwind CSS for styling, Turbo Stimulus for interactivity, RSpec for testing, and the IEX API for fetching stock market data.
 
-### Technologies Used
+## Features
+### Market Data Visualization
+   - Employs custom-built charts and widgets, as well as those from [Trading View](https://www.tradingview.com/), to deliver interactive and insightful market data visualization.
+   - Enhances user experience with comprehensive views of stock trends and market analysis, leveraging both proprietary and third-party tools.
+### Trader Features
+   - **Account Management**:
+      - Create an account to buy and sell stocks.
+      - Log in with credentials to access the account.
+      - Receive email confirmation for pending account signup.
+      - Receive approval email once trader account is approved.
+   - **Stock Trading**:
+      - Buy stocks to add to the investment portfolio (Requires account approval).
+      - Sell stocks to realize gains.
+   - **Portfolio Management**:
+      - View My Portfolio page to see all owned stocks.
+      - Access Transaction page to monitor all buying and selling transactions.
+### Admin Features
+   - **Trader Management**:
+      - Create new traders and manually add them to the app.
+      - Edit trader details to update information.
+      - View details of specific traders.
+   - **Account Approval**:
+      - Manage pending trader sign-ups to approve new registrations.
+      - Monitor all transactions to ensure smooth operation of the app.
 
-- Devise
-- Tailwind CSS
-- Turbo Stimulus
-- RSpec
-- IEX API
+## Technologies Used
+- **Devise**: Authentication system for user management.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Turbo Stimulus**: Enhances interactivity in Rails applications.
+- **RSpec**: Testing framework for Rails applications.
+- **IEX API**: Provides stock market data.
 
-### User Story
+## Installation
+1. Clone the repository: `git clone <repository-url>`
+2. Install dependencies: `bundle install`
+3. Set up the database: `rails db:create`
+                        `rails db:migrate`
+5. Obtain an API key from the [IEX API](https://iexcloud.io/) if you haven't already.
+6. Set up environment variables for IEX API keys in .env file: `IEX_API_KEY=your_iex_api_key_here`
+7. Start the Rails server: `rails server`
+8. Open your web browser and visit `http://localhost:3000` to view the application.
 
-As a Trader, I want to
-
-- create an account to buy and sell stocks
-- log in my credentials so that I can access my account on the app
-- receive an email to confirm my pending Account signup
-- receive an approval Trader Account email to notify me once my account has been approved
-- buy a stock to add to my investment (Trader signup should be approved)
-- have My Portfolio page to see all my stocks
-- have a Transaction page to see and monitor all the transactions made by buying and selling stocks
-- sell my stocks to gain money
-
-As an Admin, I want to
-
-- create a new trader to manually add them to the app
-- edit a specific trader to update his/her details
-- view a specific trader to show his/her details
-- see all the trader that registered in the app so I can track all the traders
-- have a page for pending trader sign up to easily check if there’s a new trader sign up
-- approve a trader sign up so that he/she can start adding stocks
-- see all the transactions so that I can monitor the transaction flow of the app
-
-### Installation
-
-1. Clone the repository:
-   `git clone <repository-url>`
-
-2. Install dependencies:
-   `bundle install`
-
-3. Set up the database:
-   `rails db:create
-rails db:migrate`
-
-4. Obtain an API key from the IEX API website (https://iexcloud.io/) if you haven't already.
-5. Set your IEX API key as an environment variable. You can do this by creating a `.env` file in the root of your project and adding the following line:
-   `IEX_API_KEY=your-api-key`
-
-6. Start the Rails server:
-   `rails server`
-
-7. Visit `http://localhost:3000` in your browser to view the app.
-
-### Testing
-
-RSpec is used for testing. To run the tests, use the following command:
-`bundle exec rspec`
-
+## Testing
+RSpec is used for testing. To run the tests, use the following command: `bundle exec rspec`
 This will run all the tests and provide feedback on the application's behavior.
+
+## Contributing
+Contributions are welcome! This project is intended for educational purposes, and we appreciate any enhancements or bug fixes you can provide. To contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch: ```git checkout -b feature/enhancement or bugfix/issue-description```
+3. Make your changes.
+4. Commit your changes: ```git commit -am 'Add feature/enhancement' or 'Fix bug: issue description'```
+5. Push to the branch: ```git push origin feature/enhancement or bugfix/issue-description```
+6. Create a new **Pull Request**.
+
+## Acknowledgment
+We would like to express our gratitude to the dedicated contributors who have helped shape and improve TradeXpert and its market data visualization features. Your efforts and expertise have been instrumental in creating a robust trading platform. Thank you for your valuable contributions and commitment to making TradeXpert a success.
+
+## Credits
+TradeXpert draws inspiration from the need for accessible and user-friendly trading applications. The platform aims to provide traders with essential tools for managing their investments effectively. Design and functionalities are influenced by modern web development practices to ensure a seamless user experience. Market data visualization is powered by custom-built charts and widgets, as well as tools from [Trading View](https://www.tradingview.com/), enhancing the trading experience with comprehensive insights into stock trends and market analysis.
+
+## License
+This project is for personal and educational purposes only. All content related to TradeXpert, including its design, functionalities, and concept, is the property of its respective owners.
